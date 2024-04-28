@@ -1,6 +1,5 @@
 import React from 'react';
 import GithubSignIn from '../components/GithubSignIn';
-
 const Home: React.FC = () => {
     return (
         <div>
