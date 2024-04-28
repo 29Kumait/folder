@@ -10,8 +10,8 @@ import './App.css';
 const App: React.FC = () => {
   return (
     <AuthProvider>
-      <DarkMode />
       <DarkModeProvider>
+        <DarkMode />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
