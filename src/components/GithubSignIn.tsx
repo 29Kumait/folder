@@ -25,7 +25,7 @@ const GithubSignIn: React.FC = () => {
     return (
         <>
             <button onClick={handleGithubSignIn}>
-                Sign in with GitHub
+                Sign in with
             </button>
             {error && <p style={{ color: 'red' }}>{error}</p>}
         </>
