@@ -1,10 +1,11 @@
-import GithubSignIn from "../components/GithubSignIn";
+import React from 'react';
+import GithubSignIn from '../components/GithubSignIn';
 
-const Home = () => {
+const Home: React.FC = () => {
     return (
         <div>
             <GithubSignIn />
-            <h1>Home</h1>
+            <h1>Github</h1>
         </div>
     );
 };
