@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import home from "../assets/home.ico";
+import home from "../assets/home.svg";
 import styles from './Page.module.css';
 import Bar from '../components/Bar/Bar';
 
