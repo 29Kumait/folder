@@ -4,7 +4,6 @@ const Home = () => {
     return (
         <div>
             <GithubSignIn />
-
             <h1>Home</h1>
         </div>
     );
