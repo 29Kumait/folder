@@ -24,6 +24,7 @@
 }
 
 .logoX {
+    display: none;
     position: fixed;
     top: 10px;
     right: 10px;
@@ -32,6 +33,10 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     z-index: 9999;
+}
+
+.logoX.visible {
+    display: block;
 }
 
 /* Adjust positioning for smaller screens */

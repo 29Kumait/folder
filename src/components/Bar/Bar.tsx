@@ -11,7 +11,7 @@ const Bar = ({ isVisible, onClose }: { isVisible: boolean, onClose: () => void }
                     <button>Button</button>
                 </div>
             </div>
-            <img className={styles.logoX} src={x} alt="x" aria-hidden="true" onClick={onClose} />
+            <img className={isVisible ? `${styles.logoX} ${styles.visible}` : styles.logoX} src={x} alt="x" aria-hidden="true" onClick={onClose} />
         </>
     );
 }
