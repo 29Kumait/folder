@@ -2,9 +2,10 @@ import React, { useState, useRef, useEffect } from 'react';
 import home from "../assets/home.ico";
 import styles from './Page.module.css';
 import Bar from '../components/Bar/Bar';
-import Image from '../components/Fetch/Image.tsx';
+import FetchImage from '../components/Image/FetchImage.tsx';
 import TwoColumnLayout from '../components/Layout/TwoColumnLayout.tsx';
 import CVForm from '../components/Form/CVForm';
+import ImageUpload from '../components/Image/ImageUpload';
 
 const Page: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -30,6 +31,7 @@ const Page: React.FC = () => {
     const leftContent = (
         <div>
             <CVForm />
+
         </div>
     );
 
@@ -45,19 +47,13 @@ const Page: React.FC = () => {
         <>
             <div className={styles.inputButtonWrapper}>
                 <p> 4 API . </p>
-
-                <Image path="IMG_6797.PNG" />
-                {/* 
-            <input type="text" placeholder=" accept value" />
-            <button>Button</button> */}
+                <FetchImage path="IMG_6797.PNG" />
+                <FetchImage path="IMG_6963.PNG" />
             </div>
-            {/* <div className={styles.inputButtonWrapper}>
-                <input type="text" placeholder=" accept value" />
-                <button>Button</button>
-            </div> */}
             <TwoColumnLayout left={leftContent} right={rightContent} />
             <div className={styles.inputButtonWrapper}>
-                <CVForm />
+                {/* <CVForm /> */}
+                <ImageUpload />
             </div>
         </>
 
@@ -76,9 +72,16 @@ const Page: React.FC = () => {
             />
             <Bar ref={sidebarRef} isVisible={sidebarOpen} onClose={() => setSidebarOpen(false)} height={sidebarHeight}>
                 {sidebarContent}
+                <CVForm />
             </Bar>
         </>
     );
 };
 
 export default Page;
+
+
+{/* <div className={styles.inputButtonWrapper}>
+                <input type="text" placeholder=" accept value" />
+                <button>Button</button>
+            </div> */}
