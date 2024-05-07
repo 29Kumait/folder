@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { getDatabase, ref, set } from 'firebase/database';
-import { useAuthContext } from '../Authentication';
+import { useAuthContext } from '../../hooks/useAuthContext';
 import { app } from '../../firebaseConfig';
 
 interface CVData {

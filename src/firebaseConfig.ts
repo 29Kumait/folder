@@ -3,7 +3,7 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 import { getDatabase } from 'firebase/database';
-import { getStorage } from "firebase/storage";  // Import Firebase Storage
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 
 
@@ -24,4 +24,10 @@ const auth = getAuth(app);
 const db = getDatabase(app);
 const storage = getStorage(app);
 
-export { app, analytics, auth, db, storage }; 
+const uploadFile = async (filePath: string, file: File) => {
+    const storageRef = ref(storage, filePath);
+    await uploadBytes(storageRef, file);
+    return getDownloadURL(storageRef);
+};
+
+export { app, analytics, auth, db, storage, uploadFile };
