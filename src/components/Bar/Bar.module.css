@@ -3,13 +3,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 729px;
+    height: 0;
     /* Or adjust according to the desired size */
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    background-image: url(https://universe.github.com/cta-bg.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.803)), url(https://education.github.com/external-assets/github-global-campus/img/planet-front.1fa7dc5.png);
+    backdrop-filter: blur(10px);
+    /* background-image: url(https://education.github.com/external-assets/github-global-campus/img/planet-front.1fa7dc5.png); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,6 +19,7 @@
     /* Enables vertical scrolling */
     overflow-x: hidden;
     /* Keeps the horizontal bar hidden */
+    /* https://education.github.com/external-assets/github-global-campus/img/planet-back.d464ec5.png  https://universe.github.com/cta-bg.jpg*/
 }
 
 

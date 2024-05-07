@@ -18,9 +18,9 @@
   --background-color: rgba(17, 17, 18, 0.939);
   --text-color: rgba(255, 255, 255, 0.87);
   transition: background-color 0.25s, color 0.25s;
-  background-image: url('https://cf-ipfs.com/ipfs/bafkreiejuvwm22q6amd5xrxbkcvnhnxdaq7txehfo6vsu7udlzclzl6kxi');
+  /* background-image: url('https://cf-ipfs.com/ipfs/bafkreiejuvwm22q6amd5xrxbkcvnhnxdaq7txehfo6vsu7udlzclzl6kxi');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 
 }
 

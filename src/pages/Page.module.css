@@ -21,7 +21,7 @@
 }
 
 
-.input-button-wrapper {
+/* .input-button-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@ input[type="text"] {
     padding: 9px;
     border-radius: 9px;
     margin-right: 3px;
-}
+} */
 
 @media (max-width: 768px) {
     .input-button-wrapper {

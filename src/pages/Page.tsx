@@ -31,14 +31,22 @@ const Page: React.FC = () => {
     }, [sidebarOpen]);
 
     const sidebarContent = (
-        <div className={styles.inputButtonWrapper}>
-            <p> 4 API . </p>
+        <>
+            <div className={styles.inputButtonWrapper}>
+                <p> 4 API . </p>
 
-            <Image path="IMG_6797.PNG" />
-            {/* 
+                <Image path="IMG_6797.PNG" />
+                {/* 
             <input type="text" placeholder=" accept value" />
             <button>Button</button> */}
-        </div>
+            </div>
+            {/* <div className={styles.inputButtonWrapper}>
+                <input type="text" placeholder=" accept value" />
+                <button>Button</button>
+            </div> */}
+        </>
+
+
 
     );
 
