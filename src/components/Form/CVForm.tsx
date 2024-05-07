@@ -41,7 +41,7 @@ const CVForm: React.FC = () => {
 
     return (
         <div>
-            {/* <input
+            <input
                 type="text"
                 placeholder="Name"
                 value={cvData.personalDetails.name}
@@ -52,7 +52,7 @@ const CVForm: React.FC = () => {
                 placeholder="Email"
                 value={cvData.personalDetails.email}
                 onChange={e => handleInputChange('personalDetails', { ...cvData.personalDetails, email: e.target.value })}
-            /> */}
+            />
             <textarea
                 placeholder="Education"
                 value={cvData.education.join("\n")}
