@@ -17,9 +17,10 @@ const Page: React.FC = () => {
             const updateHeight = () => {
                 const scrollHeight = sidebarRef.current ? sidebarRef.current.scrollHeight : 0;
                 const windowHeight = window.innerHeight;
-                const maxPossibleHeight = Math.max(scrollHeight, windowHeight);
-                setSidebarHeight(`${maxPossibleHeight}px`);
+                const adjustedHeight = Math.min(scrollHeight, windowHeight);
+                setSidebarHeight(`${adjustedHeight}px`);
             };
+
 
             updateHeight();
             window.addEventListener('resize', updateHeight);
