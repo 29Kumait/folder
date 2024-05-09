@@ -37,7 +37,7 @@ const Page: React.FC = () => {
 
     const rightContent = (
         <div>
-            <CVForm />
+            {/* <CVForm /> */}
 
         </div>
     );
@@ -71,7 +71,7 @@ const Page: React.FC = () => {
             />
             <Bar ref={sidebarRef} isVisible={sidebarOpen} onClose={() => setSidebarOpen(false)} height={sidebarHeight}>
                 {sidebarContent}
-                <CVForm />
+                {/* <CVForm /> */}
             </Bar>
         </>
     );

@@ -15,7 +15,9 @@ const Home: React.FC = () => {
                 <GoogleSignIn />
                 <FetchImage path="Google-icon.png" />
             </div>
-            <EmailSignIn />
+            <div>
+                <EmailSignIn />
+            </div>
         </>
     );
 };

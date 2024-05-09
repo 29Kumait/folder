@@ -6,6 +6,8 @@ import {
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
+import "../Form/CVForm.css";
+
 const EmailSignIn: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,9 +36,16 @@ const EmailSignIn: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
+
+      <div>
+        <button type="button" onClick={() => setIsSignUp(!isSignUp)}>
+          {isSignUp ? "Already have an account? Sign In" : "Create an account"}
+        </button>
+      </div>
       <label htmlFor="email">Email:</label>
       <input
+        className="input"
         id="email"
         type="email"
         value={email}
@@ -54,9 +63,7 @@ const EmailSignIn: React.FC = () => {
         aria-label="Password"
       />
       <button type="submit">{isSignUp ? "Sign Up" : "Sign In"}</button>
-      <button type="button" onClick={() => setIsSignUp(!isSignUp)}>
-        {isSignUp ? "Already have an account? Sign In" : "Create an account"}
-      </button>
+
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
   );
