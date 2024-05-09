@@ -47,8 +47,7 @@ const Page: React.FC = () => {
         <>
             <div className={styles.inputButtonWrapper}>
                 <p> 4 API . </p>
-                <FetchImage path="IMG_6797.PNG" />
-                <FetchImage path="IMG_6963.PNG" />
+                <FetchImage path="IMG_6797 2.PNG" />
             </div>
             <TwoColumnLayout left={leftContent} right={rightContent} />
             <div className={styles.inputButtonWrapper}>
