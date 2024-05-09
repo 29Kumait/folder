@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { getDatabase, ref, set } from 'firebase/database';
-import { useAuthContext } from '../../hooks/useAuthContext';
-import { app } from '../../firebaseConfig';
+import React, { useState } from "react";
+import { getDatabase, ref, set } from "firebase/database";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import { app } from "../../firebaseConfig";
+import "./CVForm.css";
 
 interface CVData {
     personalDetails: {
@@ -14,10 +15,10 @@ interface CVData {
 }
 
 const initialCVData: CVData = {
-    personalDetails: { name: '', email: '' },
-    education: [''],
-    workExperience: [''],
-    skills: ['']
+    personalDetails: { name: "", email: "" },
+    education: [""],
+    workExperience: [""],
+    skills: [""],
 };
 
 const CVForm: React.FC = () => {
@@ -25,8 +26,11 @@ const CVForm: React.FC = () => {
     const { user } = useAuthContext();
     const db = getDatabase(app);
 
-    const handleInputChange = <T extends keyof CVData>(section: T, value: CVData[T]) => {
-        setCvData(prev => ({ ...prev, [section]: value }));
+    const handleInputChange = <T extends keyof CVData>(
+        section: T,
+        value: CVData[T],
+    ) => {
+        setCvData((prev) => ({ ...prev, [section]: value }));
     };
 
     const saveCV = async () => {
@@ -40,33 +44,50 @@ const CVForm: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="form">
             <input
+                className="input"
                 type="text"
                 placeholder="Name"
                 value={cvData.personalDetails.name}
-                onChange={e => handleInputChange('personalDetails', { ...cvData.personalDetails, name: e.target.value })}
+                onChange={(e) =>
+                    handleInputChange("personalDetails", {
+                        ...cvData.personalDetails,
+                        name: e.target.value,
+                    })
+                }
             />
             <input
                 type="email"
                 placeholder="Email"
                 value={cvData.personalDetails.email}
-                onChange={e => handleInputChange('personalDetails', { ...cvData.personalDetails, email: e.target.value })}
+                onChange={(e) =>
+                    handleInputChange("personalDetails", {
+                        ...cvData.personalDetails,
+                        email: e.target.value,
+                    })
+                }
             />
             <textarea
                 placeholder="Education"
                 value={cvData.education.join("\n")}
-                onChange={e => handleInputChange('education', e.target.value.split("\n"))}
+                onChange={(e) =>
+                    handleInputChange("education", e.target.value.split("\n"))
+                }
             />
             <textarea
                 placeholder="Work Experience"
                 value={cvData.workExperience.join("\n")}
-                onChange={e => handleInputChange('workExperience', e.target.value.split("\n"))}
+                onChange={(e) =>
+                    handleInputChange("workExperience", e.target.value.split("\n"))
+                }
             />
             <textarea
                 placeholder="Skills"
                 value={cvData.skills.join(", ")}
-                onChange={e => handleInputChange('skills', e.target.value.split(", "))}
+                onChange={(e) =>
+                    handleInputChange("skills", e.target.value.split(", "))
+                }
             />
             <button onClick={saveCV}>Save CV</button>
         </div>
